@@ -1,9 +1,11 @@
- PROJECT	UniformSeriesGenerator
- 
- AUTHOR		Jacob Romero 
-  				Creative Engineering Solutions, LLC
- 
+ PROJECT:	
  UniformSeriesGenerator
+ 
+ AUTHOR:	
+ Jacob Romero
+ 
+ Creative Engineering Solutions, LLC
+  
  This Project has several parts:
 
  	1.	To provide methods for iterating through the interest calculator equations defined below and generate raw data suitable for csv files.
