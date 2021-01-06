@@ -7,7 +7,7 @@
   
  This Project has several parts:
 
- 	1.	To iterate through the equations defined below and generate raw data suitable for csv files.
+ 	1.	To iterate through the financial equations defined below and generate raw data suitable for csv files.
 
  	3.	To generate various csv files from the raw data.
 
