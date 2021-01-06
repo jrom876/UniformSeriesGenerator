@@ -30,22 +30,30 @@
 
  Equations:
 
- Series Future Value, find F given A:	
+ Series Future Value, find F given A:
+ 
  Series Future Value is the total amount which will be accrued or repaid (F)
  given a uniform series of disbursements (A) over n periods.
+			
 			F = A*((((1+i)**n)-1)/i)
 
- Series Present Worth, find P given A:		
+ Series Present Worth, find P given A:
+ 
  Series Present Worth is the present value (P) of an annuity given
  a uniform series of disbursements (A) over n periods.	
+			
 			P = A*((((1+i)**n)-1)/(i*((1+i)**n)))
 
  Sinking Fund, find A given F:
+ 
  A Sinking Fund is when you deposit a uniform series of amounts (A) 
  to accumulate a desired future amount (F) by the end of period n.		
+			
 			A = F*(i/(((1+i)**n)-1))
 
  Capital Recovery, find A given P:
+ 
  Capital Recovery is how big an annual return (A) has to be in order to
  recover the initial investment amount (P) by the end of period n.		
+			
 			P = A*((i*((1+i)**n))/(((1+i)**n)-1))
