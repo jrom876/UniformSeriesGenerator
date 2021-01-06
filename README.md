@@ -2,8 +2,7 @@
  UniformSeriesGenerator
  
  AUTHOR:	
- Jacob Romero
- 
+ Jacob Romero, 
  Creative Engineering Solutions, LLC
   
  This Project has several parts:
