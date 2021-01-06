@@ -7,7 +7,7 @@
   
  This Project has several parts:
 
- 	1.	To provide methods for iterating through the interest calculator equations defined below and generate raw data suitable for csv files.
+ 	1.	To iterate through the equations defined below and generate raw data suitable for csv files.
 
  	3.	To generate various csv files from the raw data.
 
@@ -15,8 +15,10 @@
 
  	5.	To provide unittest methods for development and maintenance.
 
- This file, csvgen.py, accomplishes parts 1 and 2 above.
+ csvgen.py, accomplishes parts 1 and 2.
+ 
  For part 3, use top_gui.py.
+ 
  For part 4, use test_csv.py.
 
  Input Parameters:
