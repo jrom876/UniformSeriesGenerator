@@ -15,11 +15,11 @@
 
  	3.	To provide unittest methods for development and maintenance.
 
- csvgen.py, accomplishes parts 1 and 2.
+ csvgen.py, accomplishes parts 0 and 1.
  
- For part 3, use top_gui.py.
+ For part 2, use top_gui.py.
  
- For part 4, use test_csv.py.
+ For part 3, use test_csv.py.
 
  Input Parameters:
 
