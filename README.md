@@ -5,15 +5,15 @@
  Jacob Romero, 
  Creative Engineering Solutions, LLC
   
- This Project has several parts:
+ This Project has four parts:
 
- 	1.	To iterate through the financial equations defined below and generate raw data suitable for csv files.
+ 	0.	To iterate through the financial equations defined below and generate raw data suitable for csv files.
 
- 	3.	To generate various csv files from the raw data.
+ 	1.	To generate various csv files from the raw data.
 
- 	4.	To provide a tkinter GUI for easy UI and UX with this class.
+ 	2.	To provide a tkinter GUI for easy UI and UX with this class.
 
- 	5.	To provide unittest methods for development and maintenance.
+ 	3.	To provide unittest methods for development and maintenance.
 
  csvgen.py, accomplishes parts 1 and 2.
  
