@@ -4,6 +4,8 @@
  AUTHOR:	
  Jacob Romero, 
  Creative Engineering Solutions, LLC
+ 
+ Note: This project is incomplete and under continuous development.
   
  This Project has four parts:
 
