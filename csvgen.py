@@ -3,18 +3,18 @@
 # PROJECT		intCalc
 # FILE			csvgen.py
 # AUTHOR		Jacob Romero 
-#				Creative Engineering Solutions, LLC
+#			Creative Engineering Solutions, LLC
 
 #### This Project has several parts:
 
-# 	1.	To provide methods for iterating through the interest calculator
-#		equations defined below and generate raw data suitable for csv files.
+# 1.	To provide methods for iterating through the interest calculator
+#	equations defined below and generate raw data suitable for csv files.
 
-# 	3.	To generate various csv files from the raw data.
+# 3.	To generate various csv files from the raw data.
 
-# 	4.	To provide a tkinter GUI for easy UI and UX with this class.
+# 4.	To provide a tkinter GUI for easy UI and UX with this class.
 
-# 	5.	To provide unittest methods for development and maintenance.
+# 5.	To provide unittest methods for development and maintenance.
 
 # This file, csvgen.py, accomplishes parts 1 and 2 above.
 # For part 3, use top_gui.py.
@@ -22,11 +22,11 @@
 
 #### Input Parameters:
 
-# 			F	Future Value
-#			P	Present Value
-#			A	Payment, end-of-period cash receipt, or disbursement
-# 			i	Interest rate per interst period
-# 			n	Number of interest periods
+# 	F	Future Value
+#	P	Present Value
+#	A	Payment, end-of-period cash receipt, or disbursement
+# 	i	Interest rate per interst period
+# 	n	Number of interest periods
 
 #### Equations:
 
