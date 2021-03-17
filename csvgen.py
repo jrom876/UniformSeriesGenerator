@@ -175,15 +175,15 @@ def cloneFromList(c=[0,0,0,0.001,1,1]):
 
 ## 1.	It isolates the input object by cloning it; 
 ## 2.	copies the clone's self.list;
-## 3.	modifies the list with extrapolated values; and
-## 4.	returns the modified list.
+## 3.	modifies the copy with extrapolated values; and
+## 4.	returns the modified copy.
 
 def extrap(cw):
 	cw1 = CSV_Writer(cw.F,cw.P,cw.A,cw.int,cw.num,cw.per)
 	outlist = cw1.list
 	print('inlist = ',outlist) ## DBPRINT
 	
-	## Switch Block ##
+	## Switch Block (or rather, Python's weak version of the Switch Block) ##
 	if (cw1.list[0]==0)and(cw1.list[1]==0)and(cw1.list[2]==0):
 		print('Nothing to do here. Try again.')
 		
