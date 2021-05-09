@@ -13,7 +13,7 @@
 
  	1.	To generate various csv files from the raw data.
 
- 	2.	To provide a tkinter GUI for easy UI and UX with this class.
+ 	2.	To provide a tkinter GUI for easy UI with this class.
 
  	3.	To provide unittest methods for development and maintenance.
 
