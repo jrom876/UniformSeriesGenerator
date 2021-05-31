@@ -81,8 +81,8 @@ from sinkingFund import *
 #from messagebox2 import *
 from interestCalc import *
 from capitalRecovery import*
-
 #############################################
+############### TKINTER SETUP ###############
 root = tk.Tk()
 root.title("Interest Calculator GUI Version 0.0.1")
 #root.geometry("1200x750")
@@ -92,6 +92,7 @@ column_size = 60
 row_size = 25
 #rootmsg = Tk() 
 #rootmsg.geometry("300x200") 
+#############################################
 ################## GLOBALS ##################
 GLOBAL_F = 0.0
 GLOBAL_P = 0
