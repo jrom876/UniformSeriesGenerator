@@ -53,9 +53,8 @@
 #		P = A*((i*((1+i)**n))/(((1+i)**n)-1))
 
 #### References:
-
 ## https://www.activestate.com/resources/quick-reads/how-to-display-data-in-a-table-using-tkinter/
-
+## https://www.python-course.eu/tkinter_entry_widgets.php     
 #################################
 ####### IMPORT STATEMENTS #######
 import os
@@ -155,18 +154,6 @@ fv_out_label_text.set("set input")
 fv_out_label = tk.Label(root, textvariable=fv_out_label_text, width=8)
 fv_out_label.grid(row=0, column=1)
 
-# set_onoff_label = tk.StringVar()
-# set_onoff_label_text = tk.StringVar()
-# set_onoff_label_text.set("LSR OFF")
-# set_onoff_label = tk.Label(root, textvariable=set_onoff_label_text, width=8)
-# set_onoff_label.grid(row=0, column=2)
-
-# set_pel_label = tk.StringVar()
-# set_pel_label_text = tk.StringVar()
-# set_pel_label_text.set("pel coeff")
-# set_pel_label = tk.Label(root, textvariable=set_pel_label_text, width=8)
-# set_pel_label.grid(row=4, column=2)
-
 ####################################################
 ############### Button Declarations ################
 gen_csv_button = tk.Button(text="Gen CSV",
@@ -174,17 +161,9 @@ gen_csv_button = tk.Button(text="Gen CSV",
                     
 gen_off_button = tk.Button(text="Turn Off", 
 					command=lambda: gen_test_cmd(), width=13)                    
-# gen_off_button = tk.Button(text="Turn Off", 
-					# command=lambda: gen_off_cmd(), width=13)
-
-# set_pwr_btn = tk.Button(text="Set DAC0 V",
-                    # command=lambda: lp_lsr_set_pwr_cmd(GLOBAL_LASER), width=13)  
 
 gen_csv_button.grid(row=0,  column=0)
 gen_off_button.grid(row=1,  column=0)
-
-# lsr_off_btn.grid(row=0,  column=1)
-# set_pwr_btn.grid(row=1,  column=0)
 
 ####################################################
 ################ Entry Declarations ################
@@ -286,8 +265,7 @@ def gen_csv_cmd():
 		num_val_label_text.set("{0}".format(cw1.num))
 		per_val_label_text.set("{0}".format(cw1.per))
 	#lchan_xcoord_label_text.set("{0}".format(int(movelsrX.get())))
-## https://www.activestate.com/resources/quick-reads/how-to-display-data-in-a-table-using-tkinter/   
-## https://www.python-course.eu/tkinter_entry_widgets.php     
+
 def gen_test_cmd():
 	## setting up tk entry widget
 	rooter=tki.Tk()   
@@ -434,12 +412,13 @@ def csvgen_2(cw1):
 	inlist = extrap(cw1)
 	cw = cloneFromList(inlist)
 	#outlist = cw.list
+
+	#############################################################
+	##			outlist2[0:8]
+	##  [0]	 [1]  	[2]	[3]	[4]	[5]	[6]	[7]
+	##  fv	 pw	pmt	int	num	test1	test2	test3	
 	outlist2 = [cw.F,cw.P,cw.A,cw.int,cw.num*cw.per,0,round(cw.F-cw.P,2),0]
 	print(outlist2)
-	#############################################################
-	##					outlist2[0:8]
-	##	[0]	 [1]  [2]	[3]		[4]		[5]		[6]		[7]
-	##  fv	 pw	  pmt	int		num		test1	test2	test3
 	
 	for k in range(1,(cw.num*cw.per)+1):
 		
@@ -496,44 +475,10 @@ for a in range(30):
 	int_in_label.grid( row=0, column=7)
 	num_in_label.grid( row=0, column=8)
 	per_in_label.grid( row=0, column=9)
-    
-	
-    # Targetmode_label.grid(  row=9, column=4)
-    # xc_label.grid(          row=9, column=5)
-    # yc_label.grid(          row=9, column=6)
-    # detect_label.grid(      row=9, column=7)
-    # dist_label.grid(        row=9, column=8)
-    # dispo_label.grid(       row=9, column=9)
-    # lock_label.grid(        row=9, column=10)
-    # pel_label.grid(         row=9, column=11)
-
-    # # set_pwr_label.grid(     row=1,  column=2)
-    # mv_laserX_label.grid(   row=3,  column=5)
-    # mv_laserY_label.grid(   row=3,  column=6)
-    # mv_laserZ_label.grid(   row=3,  column=7)
-
-    # mv_targetX_label.grid(   row=12,  column=5)
-    # mv_targetY_label.grid(   row=12,  column=6)
-    # mv_targetZ_label.grid(   row=12,  column=7)
-    # mv_targetMood_label.grid(row=12,  column=8)
-
-    # create_laser_label.grid(row=1, column=1)
-    # create_target_label.grid(row=2, column=1)
-    # spon_label.grid(        row=3, column=1)
-    # spoff_label.grid(       row=4, column=1)
-    # lsron_label.grid(       row=5, column=1)
-    # lsroff_label.grid(      row=6, column=1)
-    # dot_label.grid(         row=7, column=1)
-    # square_label.grid(      row=8, column=1)
-    # move2_label.grid(       row=9, column=1)
-
-# lc[0].frame.grid(row=0, column=3, rowspan=5, columnspan=12)
-# tm[0].frame.grid(row=7, column=3, rowspan=5, columnspan=12)
-
+ 
 root.update()
 root.mainloop()
 
 #### Construction Zone Pylon ####
-
 #### End of Construction Zone Pylon ####
 
