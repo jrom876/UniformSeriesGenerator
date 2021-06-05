@@ -370,9 +370,9 @@ def csvgen_1(cw1):
 	#print(outlist1)
 
 	############################################################
-	##					outlist1[0:8]
-	##	[0]	 [1]  [2]	[3]		[4]		[5]		[6]		[7]
-	##  fv	 pw	  pmts	profit	count	test1	test2	test3
+	##			outlist1[0:8]
+	##  [0]	 [1]  	[2]	[3]	[4]	[5]	[6]	[7]
+	##  fv	 pw	 pmts	profit	count	test1	test2	test3
 
 	for k in range(1,(cw.num*cw.per)+1):
 		## Future Value
