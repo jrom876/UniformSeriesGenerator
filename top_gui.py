@@ -158,10 +158,10 @@ fv_out_label.grid(row=0, column=1)
 ####################################################
 ############### Button Declarations ################
 gen_csv_button = tk.Button(text="Gen CSV",
-                    command=lambda: gen_csv_cmd(), width=13)
+		command=lambda: gen_csv_cmd(), width=13)
                     
 gen_off_button = tk.Button(text="Turn Off", 
-					command=lambda: gen_test_cmd(), width=13)                    
+		command=lambda: gen_test_cmd(), width=13)                    
 
 gen_csv_button.grid(row=0,  column=0)
 gen_off_button.grid(row=1,  column=0)
@@ -193,17 +193,17 @@ perset.set(1)
 Fset_entry.grid		(row=1,  column=1)
 Pset_entry.grid		(row=2,  column=1)
 Aset_entry.grid		(row=3,  column=1)
-intset_entry.grid   (row=4,  column=1)
+intset_entry.grid   	(row=4,  column=1)
 numset_entry.grid 	(row=5,  column=1)
 perset_entry.grid 	(row=6,  column=1)
 
 ###########
-F_val      = tk.StringVar()
-P_val    = tk.StringVar()
-A_val    = tk.StringVar()
-int_val    = tk.StringVar()
-num_val    = tk.StringVar()
-per_val       = tk.StringVar()
+F_val		 = tk.StringVar()
+P_val		= tk.StringVar()
+A_va		= tk.StringVar()
+int_val 	= tk.StringVar()
+num_val		= tk.StringVar()
+per_val		= tk.StringVar()
 
 F_val_label_text = tk.StringVar()
 F_val_label_text.set("0")
@@ -241,11 +241,11 @@ per_val_label.grid(row=1, column=9)
 def gen_csv_cmd():
 	#cw1 = CSV_Writer(0,25000,0,0.03,10,12)
 	cw1 = CSV_Writer(float(Fset.get()),
-					float(Pset.get()),
-					float(Aset.get()),
-					float(intset.get()),
-					int(numset.get()),
-					int(perset.get()))
+		float(Pset.get()),
+		float(Aset.get()),
+		float(intset.get()),
+		int(numset.get()),
+		int(perset.get()))
 	print('then\t',cw1.printlist)
 	cw1 = cloneFromList(extrap(cw1))
 	print('now\t',cw1.printlist)
