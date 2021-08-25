@@ -69,7 +69,7 @@ from csv import reader
 from csv import writer
 from csv import DictReader
 import tkinter as tk
-import tkinter as tki
+# import tkinter as tki
 from tkinter import *
 import datetime as datetime
 try:
