@@ -160,8 +160,9 @@ fv_out_label.grid(row=0, column=1)
 gen_csv_button = tk.Button(text="Gen CSV",
 		command=lambda: gen_csv_cmd(), width=13)
                     
-gen_off_button = tk.Button(text="Turn Off", 
-		command=lambda: gen_test_cmd(), width=13)                    
+gen_off_button = tk.Button(text="Show CSV", 
+		# ~ command=lambda: gen_test_cmd(), width=13)
+		command=lambda: gen_test_cmd2(), width=13)                     
 
 gen_csv_button.grid(row=0,  column=0)
 gen_off_button.grid(row=1,  column=0)
@@ -305,6 +306,85 @@ def gen_test_cmd():
 			cols.append(e)
 		rows.append(cols)
 	#rooter.loop()
+	
+	###################################
+def gen_test_cmd2():	
+	## Initializing csv object with our input values
+	cw1 = CSV_Writer(
+		float(Fset.get()),
+		float(Pset.get()),
+		float(Aset.get()),
+		float(intset.get()),
+		int(numset.get()),
+		int(perset.get()))
+	print('then\t',cw1.printlist)	 ## DBPRINT
+	cw1 = cloneFromList(extrap(cw1))
+	print('now\t',cw1.printlist)	 ## DBPRINT
+	
+	print("Testing Show CSV Button") ## DBPRINT
+	
+	## Create csv file in main directory	
+	tgf1_header =['count','FV','PW','SF','CR','Atot','FV-PV','Owed']
+	outlist2 = [cw1.num*cw1.per,cw1.F,cw1.P,round(cw1.sinkFund,2),round(cw1.capRecovery,2),round(cw1.A*((cw1.num*cw1.per)+1),2),round((cw1.F-cw1.P),2),0] ## has 8 items
+	print("cw1.A = ",cw1.A) 
+	print("k = ",cw1.num*cw1.per) 
+	print("cw1.A * k = ",cw1.A*(cw1.num*cw1.per))  	 		
+	with open('top_gui_1.csv', mode='w') as tgf1file:
+		tgf1_writer = csv.writer(tgf1file)
+		tgf1_writer.writerow(tgf1_header)
+		tgf1_writer.writerow(outlist2)
+	tgf1file.close()
+	with open('top_gui_1.csv', mode='a+') as tgf1file:
+		tgf1_writer = csv.writer(tgf1file)
+		for k in range(1,(cw1.num*cw1.per)+1):
+			
+			## Counter
+			outlist2[0] = k			
+			
+			## Future Value
+			var1 = round(cw1.F - cw1.A*((((1+(cw1.int/cw1.per))**k)-1)/(cw1.int/cw1.per)),2)
+			outlist2[1] = var1 if var1 >=0 else 0 ## FGA	
+			
+			## Present Worth	
+			## self.presentWorth = pmt*(((math.pow((1+(i/per)),(n*per)))-1)/((i/per)*(math.pow((1+(i/per)),(n*per)))))
+			var2 = round(cw1.P - cw1.A*(((math.pow((1+(cw1.int/cw1.per)),k))-1)/((cw1.int/cw1.per)*
+							(math.pow((1+(cw1.int/cw1.per)),k)))),2)
+			outlist2[2] = var2 if var2 >= 0 else 0 ## PGA	
+			
+			## Sinking Fund
+			# ~ ##self.sinkFund = fv*((i/per)/(((1+(i/per))**(n*per))-1))
+			var3 = round(cw1.F*((cw1.int/cw1.per)/(((1+(cw1.int/cw1.per))**k)-1)),2)		
+			outlist2[3] = var3 if var3 >= 0 else 0
+			
+			## Capital Recovery
+			# ~ ## self.capRecovery = pw*(((i/per)*(math.pow((1+(i/per)),(n*per))))/((math.pow((1+(i/per)),(n*per))-1)))
+			var4 = round(cw1.P*(((cw1.int/cw1.per)*((1+(cw1.int/cw1.per))**k))/(((1+(cw1.int/cw1.per))**k)-1)),2)		
+			outlist2[4] = var4 if var4 >= 0 else 0
+			
+			## Sum of Payments
+			var5 = round(cw1.A*k,2)
+			outlist2[5] = var5 #if var5 >= 0 else 0
+			
+			## FV - PW
+			# ~ outlist2[6] = round((var0 - var1)/k,2)
+			var6 = round((cw1.P - var2),2)
+			outlist2[6] = var6 #if var6 >= 0 else 0
+			
+			## PW 
+			# ~ outlist2[7] = round(cw1.P-(var0-var1),2)
+			# ~ outlist2[7] = round((var0-outlist2[5])/k,2)			
+			# ~ var7 = round((cw1.P - var5),2)		
+			var7 = round((cw1.P - var5),2)
+			outlist2[7] = var7 #if var7 >= 0 else 0
+			
+			tgf1_writer.writerow(outlist2)
+			# ~ #print(outlist2)						
+		tgf1file.close()
+	print('cw1\t{0}\n'.format(cw1.list)) ## DBPRINT
+	print('outlist2\t{0}\n'.format(outlist2)) ## DBPRINT
+##########################################################
+	
+	
 #######################
 ####### CLONERS #######		
 def cloneCSV_Writer(cw):
