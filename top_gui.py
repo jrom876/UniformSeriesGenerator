@@ -338,14 +338,14 @@ def gen_test_cmd2():
 		tgf1_writer = csv.writer(tgf1file)
 		for k in range(1,(cw1.num*cw1.per)+1):
 			
-			## Counter
+			## Counter for this iteration
 			outlist2[0] = k			
 			
-			## Future Value
+			## Future Value for this iteration
 			var1 = round(cw1.F - cw1.A*((((1+(cw1.int/cw1.per))**k)-1)/(cw1.int/cw1.per)),2)
 			outlist2[1] = var1 if var1 >=0 else 0 ## FGA	
 			
-			## Present Worth	
+			## Present Worth for this iteration
 			## self.presentWorth = pmt*(((math.pow((1+(i/per)),(n*per)))-1)/((i/per)*(math.pow((1+(i/per)),(n*per)))))
 			var2 = round(cw1.P - cw1.A*(((math.pow((1+(cw1.int/cw1.per)),k))-1)/((cw1.int/cw1.per)*
 							(math.pow((1+(cw1.int/cw1.per)),k)))),2)
@@ -361,19 +361,15 @@ def gen_test_cmd2():
 			var4 = round(cw1.P*(((cw1.int/cw1.per)*((1+(cw1.int/cw1.per))**k))/(((1+(cw1.int/cw1.per))**k)-1)),2)		
 			outlist2[4] = var4 if var4 >= 0 else 0
 			
-			## Sum of Payments
+			## Sum of Payments for this iteration
 			var5 = round(cw1.A*k,2)
 			outlist2[5] = var5 #if var5 >= 0 else 0
 			
-			## FV - PW
-			# ~ outlist2[6] = round((var0 - var1)/k,2)
+			## TEST:	PW - (present worth for this iteration)
 			var6 = round((cw1.P - var2),2)
 			outlist2[6] = var6 #if var6 >= 0 else 0
 			
-			## PW 
-			# ~ outlist2[7] = round(cw1.P-(var0-var1),2)
-			# ~ outlist2[7] = round((var0-outlist2[5])/k,2)			
-			# ~ var7 = round((cw1.P - var5),2)		
+			## TEST:	PW -  (sum of payments for this iteration)
 			var7 = round((cw1.P - var5),2)
 			outlist2[7] = var7 #if var7 >= 0 else 0
 			
