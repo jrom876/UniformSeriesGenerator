@@ -26,7 +26,7 @@
 # 	F		Future Value
 #	P		Present Value
 #	A		Payment, end-of-period cash receipt, or disbursement
-# 	i		Interest rate per interst period
+# 	i		Interest rate per period
 # 	n		Number of years 
 #	per		Number of interest periods per year
 
