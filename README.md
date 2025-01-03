@@ -19,7 +19,7 @@
  
  For part 2, use top_gui.py.
  
- For part 3, use test_csv.py.
+ For part 3, use test_csv.py. (Still working on a few bugs...)
 
  Input Parameters:
 
@@ -48,7 +48,8 @@
  Sinking Fund, find A given F:
  
  A Sinking Fund is when you deposit a uniform series of amounts (A) 
- to accumulate a desired future amount (F) by the end of period n.		
+ to accumulate a desired future amount (F) by the end of period n. 
+ This is the one you use to calculate the monthly loan payback amount.
 			
 			A = F*(i/(((1+i)**n)-1))
 
