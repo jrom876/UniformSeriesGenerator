@@ -16,11 +16,6 @@
 
 # 	3.	To provide unittest methods for development and maintenance.
 
-# This file, top_gui.py, accomplishes part 2 above.
-# For parts 0 and 1, use csvgen.py.
-# For part 3, use test_csv.py.
-
-
 #### Input Parameters:
 
 # 	F		Future Value
