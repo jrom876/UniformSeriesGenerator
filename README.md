@@ -17,11 +17,7 @@
 
  	3.	To provide unittest methods for development and maintenance.
 
- csvgen.py, accomplishes parts 0 and 1 right now.
  
- top_gui.py accomplishes parts 0, 1 and 2 for now.
- 
- For part 3, Still working on it...
 
  Input/Output Parameters:
 
