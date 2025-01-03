@@ -5,9 +5,9 @@
  Jacob Romero, 
  Creative Engineering Solutions, LLC
 
- This project will simplify some well-known loan and investment calculations (The Uniform Series Equations), and facilitate the creation of spreadsheets for loans and investments from these calculations.
+ This project contains Python GUIs to simplify the use of some well-known loan and investment calculations (The Uniform Series Equations), and to facilitate the creation of spreadsheets from these calculations.
   
- This Project has four parts:
+ This Project has four requirements:
 
  	0.	To iterate through the financial equations defined below and generate raw data suitable for csv files.
 
