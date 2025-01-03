@@ -4,6 +4,8 @@
  AUTHOR:	
  Jacob Romero, 
  Creative Engineering Solutions, LLC
+
+ This project will simplify certain investment calculations (The Uniform Series Equations), and facilitate the creation of spreadsheets for loans and investments.
   
  This Project has four parts:
 
@@ -15,13 +17,13 @@
 
  	3.	To provide unittest methods for development and maintenance.
 
- csvgen.py, accomplishes parts 0 and 1.
+ csvgen.py, accomplishes parts 0 and 1 right now.
  
- For part 2, use top_gui.py.
+ top_gui.py accomplishes parts 0, 1 and 2 for now.
  
- For part 3, use test_csv.py. (Still working on a few bugs...)
+ For part 3, Still working on it...
 
- Input Parameters:
+ Input/Output Parameters:
 
  			F	Future Value
 			P	Present Value
@@ -49,7 +51,7 @@
  
  A Sinking Fund is when you deposit a uniform series of amounts (A) 
  to accumulate a desired future amount (F) by the end of period n. 
- This is the one you use to calculate the monthly loan payback amount.
+ This is the one you use to calculate a monthly loan payback amount.
 			
 			A = F*(i/(((1+i)**n)-1))
 
