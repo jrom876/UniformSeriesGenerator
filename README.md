@@ -5,7 +5,7 @@
  Jacob Romero, 
  Creative Engineering Solutions, LLC
 
- This project will simplify certain investment calculations (The Uniform Series Equations), and facilitate the creation of spreadsheets for loans and investments.
+ This project will simplify some well-known loan and investment calculations (The Uniform Series Equations), and facilitate the creation of spreadsheets for loans and investments from these calculations.
   
  This Project has four parts:
 
