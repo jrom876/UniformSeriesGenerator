@@ -6,6 +6,8 @@
  Creative Engineering Solutions, LLC
 
  This project contains Python GUIs to simplify the use of some well-known loan and investment calculations (The Uniform Series Equations), and to facilitate the creation of spreadsheets from these calculations.
+
+ NOTE: top_gui.py is the one you want to run. csvgengui.py is currently in need of debug.
   
  This Project has four requirements:
 
