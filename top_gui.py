@@ -72,10 +72,10 @@ try:
 except ImportError:  # Python 3
     import tkinter.messagebox as tkMessageBox
 
-from sinkingFund import *
+#from sinkingFund import *
 #from messagebox2 import *
-from interestCalc import *
-from capitalRecovery import*
+#from interestCalc import *
+#from capitalRecovery import*
 #############################################
 ############### TKINTER SETUP ###############
 root = tk.Tk()
